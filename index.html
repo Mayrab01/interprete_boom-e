@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="dibujar.js"></script>
+<script type="text/javascript" src="interprete.js"></script>
+<title>Canvas</title>
+<style>
+    #Canvas{
+        background-color: rgb(145, 145, 145);
+        border: 1px solid black;
+    }
+    </style>
+    <script>
+        var posicion =60, posiciony=60;//declación de variables
+        var intervalo;
+        var robot,linea,des;
+        //1 son bombas
+        //2 son obstaculos
+        //0 esta disponible
+
+var tablero=[[2,2,2,2,2,2,2,2,2,2,2], //tableros de posciones
+             [2,1,0,0,2,2,0,1,0,0,2],
+             [2,0,0,0,0,0,0,0,0,0,2],
+             [2,0,0,0,0,0,0,0,0,0,2],
+             [2,0,0,0,0,0,0,0,2,2,2],
+             [2,2,1,0,0,0,0,0,0,0,2],
+             [2,2,2,0,0,0,0,0,0,0,2],
+             [2,2,0,0,0,0,0,0,2,2,2],
+             [2,0,0,0,0,0,0,0,0,0,2],
+             [2,0,1,0,0,0,1,0,0,0,2],
+             [2,2,2,2,2,2,2,2,2,2,2]];
+var n=0;
+
+
+
+
+    animar();
+        
+    function dibujarBoom(){
+            //contexto.clearRect(0,0,posicion,posiciony);
+            blan.fillStyle="#FFFFFF";
+            //contexto.fillRect(posicion-60,posiciony-p2,60,60);
+            tabl();
+            obstaculo_bombas(tablero);
+            robot.fillStyle="#3B83BD";
+            //contexto.fillRect(0,0,60,60);
+            interp(tablero);           
+        }
+    
+
+    
+
+    </script>
+    
+
+</head>
+<body onload="animar()" >
+<canvas id="Canvas" width="660" height="660">
+    tu navegador no tiene HTML 5
+</canvas>
+</body>
+
+</html>
